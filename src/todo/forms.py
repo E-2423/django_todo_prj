@@ -6,10 +6,12 @@ class TodoAddForm(forms.ModelForm):
     class Meta:
         model = Todo
         fields = ('title',)
-        
+
 
 class TodoUpdateForm(forms.ModelForm):
-    model = Todo
-    fields = ('title', 'completed')
-        
+    class Meta:
+        model = Todo
+        fields = ('title', 'completed')
+        # exclude = ('created_date')
+
          
